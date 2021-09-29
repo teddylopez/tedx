@@ -1,18 +1,26 @@
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   color: white;
-  position: sticky;
   background: transparent;
-  // height: 80px;
-  // margin-top: -80px;
+  height: 80px;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   font-size: 1rem;
-  top: 0;
   z-index: 10;
   transition: all 0.8s ease 0s;
+
+  div.inner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    padding: 0 24px;
+    max-width: 1100px;
+  }
 
   #mobile-icon {
     display: none;
@@ -22,7 +30,7 @@ nav {
       position: sticky;
       top: 0;
       right: 0;
-      transform: translate(-100%, 60%);
+      transform: translate(-100%, 10%);
       font-size: 1.8rem;
       cursor: pointer;
       color: #fff;
@@ -43,15 +51,21 @@ nav {
     text-shadow: rgb(0 0 0) 3px 3px 0px, rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 3px 3px 0;
   }
 
-  ul {
+  ul.nav-menu {
+    float: right;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     list-style: none;
     text-align: center;
     margin-right: -22px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
 
     li {
+      height: 80px;
+
       a {
         color: rgb(255, 255, 255);
         display: flex;
@@ -62,13 +76,20 @@ nav {
         height: 100%;
         cursor: pointer;
       }
+
+      &.active {
+        border-bottom: 3px solid #ff1744;
+      }
     }
   }
 
-  nav {
+  div.button {
+    float: right;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
 
     a {
       border-radius: 50px;
@@ -86,13 +107,6 @@ nav {
   }
 }
 
-nav > div {
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 100%;
-  padding: 0 24px;
-  max-width: 1100px;
+.scrolled-nav {
+  background-color: black;
 }

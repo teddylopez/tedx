@@ -1,0 +1,58 @@
+#sidebar {
+  color: rgb(255, 255, 255);
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgb(13, 13, 13);
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 1;
+
+  div.frown {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px 3rem;
+    font-size: 2rem;
+    color: white;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  div.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    text-align: center;
+
+    a {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      list-style: none;
+      transition: all 0.2s ease-in-out 0s;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      margin: 70px;
+    }
+  }
+}
+
+.closed {
+  top: -100%;
+  opacity: 0;
+  background-color: transparent;
+}
+
+.open {
+  top: 0;
+  opacity: 0;
+}

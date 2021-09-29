@@ -144,8 +144,20 @@ div.section {
   }
 }
 
+#about-me {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#skills {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 #experience {
-  padding: 5% 10%;
+  padding: 10%;
 
   h1.header {
     font-family: "Permanent Marker", cursive;
@@ -188,12 +200,15 @@ div.section {
 }
 
 #interests {
+  height: 100vh;
   margin-top: -500px;
+  display: flex;
+  justify-content: center;
 }
 
 #carousel {
   background-color: white;
-  height: 1000px;
+  height: 100vh;
   overflow-x: hidden;
 
   div.inner-content {
@@ -224,6 +239,11 @@ div.section {
 }
 
 #contact {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   h1 {
     font-family: "Permanent Marker", cursive;
     transform: rotate(-4deg);

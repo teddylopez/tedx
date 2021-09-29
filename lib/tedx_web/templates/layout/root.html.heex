@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="tedspace.us" content="This website was built by Ted Lopez" />
   <%= csrf_meta_tag() %>
-  <%= live_title_tag assigns[:page_title] || "Tedx", suffix: " · Phoenix Framework" %>
+  <%= live_title_tag assigns[:page_title] || "tedlopez" %>
   <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css" )} />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
@@ -16,32 +16,58 @@
 
 <body>
   <header>
-    <section class="container">
-      <nav>
-        <div class="flex-container">
+    <section class="container" x-data="{ open: false }">
+      <nav id="nav">
+        <div class="inner-content">
           <a class="brand" href="/">tedlopez</a>
-          <div id="mobile-icon"></div>
-          <div class="">
-            <ul class="">
-              <li class="">
-                <a exact="true" class="">About Me</a>
-              </li>
-              <li class="">
-                <a exact="true" class="">Skills</a>
-              </li>
-              <li class="">
-                <a exact="true" class="">Experience</a>
-              </li>
-              <li class="">
-                <a exact="true" class="">Contact</a>
-              </li>
-            </ul>
+          <div id="mobile-icon" @click="open = !open">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M294.396 52.127c-17.944.066-35.777 1.834-52.886 4.746-86.727 14.76-135.612 53.467-161.99 107.824 31.215-2.434 62.002-5.024 91.966-4.838 24.114.15 47.696 2.097 70.54 7.37 15.15 3.5 24.652 16.647 27.607 31.735 2.954 15.088.858 32.92-5.055 51.553l-.287.904-.468.826c-7.762 13.64-24.263 24.498-45.295 35.994-21.032 11.497-46.695 22.693-72.27 32.428-25.574 9.735-51.012 17.98-71.575 23.437-7.254 1.925-13.85 3.48-19.735 4.657 2.275 31.13 6.562 63.38 12.008 95.98 140.118-38.25 273.5-79.888 403.51-123.254 25.935-44.457 29.927-86.448 16.967-126.734-22.393-69.605-60.9-107.048-105.215-126.168-27.696-11.95-57.913-16.57-87.82-16.46zM130.184 179.205c-9.06.51-18.265 1.156-27.532 1.836L59.31 329.386c3.384-.79 6.936-1.663 10.754-2.676 4.004-1.063 8.27-2.27 12.66-3.554 10.022-31.07 43.3-131.415 47.46-143.95zm-46.7 3.262c-10.868.826-21.824 1.654-32.908 2.37-.32.445-.714.947-1.318 2.267-1.58 3.45-3.375 9.418-4.912 16.724-3.075 14.612-5.37 34.727-6.705 54.877-1.333 20.15-1.73 40.438-1.193 55.582.268 7.572.79 13.905 1.442 17.96.048.306.078.312.13.59.46-.01 1.033-.044 1.546-.064l43.918-150.306zM224 183c-15.596 0-28.66 12.582-28.66 28.152s13.064 28.155 28.66 28.155 28.66-12.584 28.66-28.155c0-15.57-13.064-28.152-28.66-28.152zm0 18c6.12 0 10.66 4.567 10.66 10.152 0 5.586-4.54 10.155-10.66 10.155s-10.66-4.57-10.66-10.155c0-5.585 4.54-10.152 10.66-10.152zm230.19 144.865C330.383 386.852 203.285 426.23 70.054 462.56c.413 2.317.81 4.63 1.232 6.948 147.607-26.65 255.974-68.965 371.36-109.164 4.118-4.857 7.947-9.68 11.546-14.48z">
+              </path>
+            </svg>
           </div>
-          <nav class="">
+          <ul class="nav-menu">
+            <li class="about-me">
+              <a href="#about-me" exact="true" class="">About Me</a>
+            </li>
+            <li class="skills">
+              <a href="#skills" exact="true" class="">Skills</a>
+            </li>
+            <li class="experience">
+              <a href="#experience" exact="true" class="">Experience</a>
+            </li>
+            <li class="contact">
+              <a href="#contact" exact="true" class="">Contact</a>
+            </li>
+          </ul>
+          <div class="button">
             <a class="" href="/portfolio">Portfolio</a>
-          </nav>
+          </div>
         </div>
       </nav>
+      <div id="sidebar" :class="{'open' : open, 'closed' : !open}">
+        <div class="frown">
+          <svg @click="open = !open" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" class="sc-gInsOo grsaJH" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 11C9.55228 11 10 10.5523 10 10C10 9.44772 9.55228 9 9 9C8.44772 9 8 9.44772 8 10C8 10.5523 8.44772 11 9 11Z" fill="currentColor"></path>
+            <path d="M14 17C14 15.8954 13.1046 15 12 15C10.8954 15 10 15.8954 10 17H8C8 14.7909 9.79086 13 12 13C14.2091 13 16 14.7909 16 17H14Z" fill="currentColor"></path>
+            <path d="M16 10C16 10.5523 15.5523 11 15 11C14.4477 11 14 10.5523 14 10C14 9.44772 14.4477 9 15 9C15.5523 9 16 9.44772 16 10Z" fill="currentColor"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+              fill="currentColor"></path>
+          </svg>
+        </div>
+        <div class="flex">
+          <div>
+            <ul class="sc-dtTInj bRFhLZ">
+              <a class="sc-dkIXFM fkyVgZ" href="/">tedlopez</a>
+              <a class="sc-dkIXFM fkyVgZ" href="/portfolio">Portfolio</a>
+              <a href="https://github.com/teddylopez" target="_blank" rel="noreferrer" class="sc-XhUPp kiNLFp">GitHub</a>
+              <a href="https://www.linkedin.com/in/tedmlopez/" target="_blank" rel="noreferrer" class="sc-XhUPp kiNLFp">LinkedIn</a>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </header>
   <%= @inner_content %>
