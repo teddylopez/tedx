@@ -1,5 +1,19 @@
 @import "./phoenix.scss";
+@import "./nav.scss";
+@import "./animations.scss";
 
-html {
-  background-color: black;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: #101522;
+}
+
+div.flex-container {
+  display: flex;
+  align-items: center;
 }

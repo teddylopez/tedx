@@ -15,16 +15,30 @@
   <header>
     <section class="container">
       <nav>
-        <ul>
-          <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-          <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-          <% end %>
-        </ul>
+        <div class="flex-container">
+          <a class="brand" href="/">tedlopez</a>
+          <div id="mobile-icon"></div>
+          <div class="">
+            <ul class="">
+              <li class="">
+                <a exact="true" class="">About Me</a>
+              </li>
+              <li class="">
+                <a exact="true" class="">Skills</a>
+              </li>
+              <li class="">
+                <a exact="true" class="">Experience</a>
+              </li>
+              <li class="">
+                <a exact="true" class="">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <nav class="">
+            <a class="" href="/portfolio">Portfolio</a>
+          </nav>
+        </div>
       </nav>
-      <a href="https://phoenixframework.org/" class="phx-logo">
-        <img src={Routes.static_path(@conn, "/images/phoenix.png" )} alt="Phoenix Framework Logo" />
-      </a>
     </section>
   </header>
   <%= @inner_content %>
