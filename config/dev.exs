@@ -67,3 +67,12 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# config :tedx, Tedx.Mailer,
+#   adapter: Swoosh.Adapters.SMTP,
+#   relay: "smtp.gmail.com",
+#   port: 587,
+#   username: System.get_env("EMAIL_USERNAME"),
+#   password: System.get_env("EMAIL_PASSWORD"),
+#   tls: :if_available,
+#   auth: :always

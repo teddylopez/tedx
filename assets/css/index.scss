@@ -175,7 +175,7 @@ div.section {
 }
 
 #interests {
-  height: 100vh;
+  height: 50vh;
   margin-top: -500px;
   display: flex;
   justify-content: center;
@@ -231,44 +231,58 @@ div.section {
     padding: 3%;
   }
 
-  h1 {
-    font-family: "Permanent Marker", cursive;
-    transform: rotate(-4deg);
-    color: rgb(255, 23, 68);
-    text-align: center;
-    font-size: 2.5rem;
-  }
-
-  form {
-    input.text {
-      margin: 10px 0;
-      width: 100%;
-      height: 40px;
-      padding: 5px;
+  div.form-container {
+    margin: 0 auto;
+    width: 33%;
+    @media screen and (max-width: 900px) {
+      width: 90%;
     }
 
-    textarea.textarea {
-      margin: 10px 0;
-      padding: 5px;
-      width: 100%;
-      height: 150px;
-      outline: none;
-      resize: none;
+    h1 {
+      font-family: "Permanent Marker", cursive;
+      transform: rotate(-4deg);
+      color: rgb(255, 23, 68);
+      text-align: center;
+      font-size: 2.5rem;
     }
 
-    button.submit {
-      margin-top: 20px;
-      border-radius: 50px;
-      background: rgb(255, 23, 68);
-      white-space: nowrap;
-      padding: 10px 22px;
-      color: rgb(1, 6, 6);
-      font-size: 16px;
-      outline: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out 0s;
-      text-decoration: none;
+    form {
+      input.text {
+        margin: 10px auto;
+        height: 40px;
+        width: 100%;
+        padding: 5px;
+      }
+
+      textarea.textarea {
+        margin: 10px auto;
+        padding: 5px;
+        height: 150px;
+        width: 100%;
+        outline: none;
+        resize: none;
+      }
+
+      div.button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button.submit {
+          margin-top: 20px;
+          border-radius: 50px;
+          background: rgb(255, 23, 68);
+          white-space: nowrap;
+          padding: 10px 22px;
+          color: rgb(1, 6, 6);
+          font-size: 16px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out 0s;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

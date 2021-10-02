@@ -75,7 +75,7 @@
   <div class="training-list">
     <%= for course <- @training do %>
       <div>
-        <a href={course.link}><%= course.title %></a>
+        <a href={course.link} target="_blank"><%= course.title %></a>
       </div>
     <% end %>
   </div>
@@ -109,17 +109,22 @@
 </div>
 
 <div id="contact" class="section light">
-  <div>
+  <div class="form-container">
     <h1 class="header">Contact Me</h1>
-    <form>
-      <button type="hidden" name="contact_number" class="sc-iNqMTl hFrbFX"></button>
-      <input required="" type="text" name="from_name" placeholder="Name" class="text">
-      <input required="" type="text" name="from_email" placeholder="Email" class="text">
-      <textarea required="" name="message" placeholder="..." class="textarea"></textarea>
-      <div class="flex-container">
-        <button type="submit" class="submit" style="margin:0 auto;">Send Complaint</button>
+    <.form let={f} for={@changeset} phx-change="validate" phx-submit="email">
+      <%= text_input f, :name, class: "text", placeholder: "name" %>
+      <%= error_tag f, :name %>
+
+      <%= email_input f, :email, class: "text", placeholder: "email" %>
+      <%= error_tag f, :email %>
+
+      <%= textarea f, :message, class: "textarea", placeholder: "message..." %>
+      <%= error_tag f, :message %>
+
+      <div class="button-container">
+        <%= submit "Send Complaint", class: "submit", disabled: !@changeset.valid?  %>
       </div>
-    </form>
+    </.form>
   </div>
 </div>
 

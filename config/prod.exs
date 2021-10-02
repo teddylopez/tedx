@@ -49,3 +49,12 @@ config :logger, level: :info
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
+
+config :tedx, Tedx.Mailer,
+  adapter: Swoosh.Adapters.SMTP,
+  relay: "smtp.gmail.com",
+  port: 587,
+  username: System.get_env("EMAIL_USERNAME"),
+  password: System.get_env("EMAIL_PASSWORD"),
+  tls: :if_available,
+  auth: :always

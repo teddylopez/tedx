@@ -1,0 +1,9 @@
+You received some hatemail from tedspace!
+<br>
+<br>
+Sender Name: <i><%= String.capitalize(@sender_name) %></i>
+<br>
+Sender email: <i><%= @sender_email %></i>
+<br>
+<br>
+<%= @text_body %>
