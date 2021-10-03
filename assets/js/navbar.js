@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", (event) => {
+  const url = window.location.pathname;
+  const navMenu = document.getElementById('nav-menu')
   const nav = document.querySelector('nav');
   const aboutMeDiv = document.getElementById('about-me');
   const aboutMeLi = document.querySelector('li.about-me');
@@ -9,6 +11,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const contactDiv = document.getElementById('contact');
   const contactLi = document.querySelector('li.contact');
 
+  if (url !== '/') {
+    navMenu.style.display = 'none';
+  }
+
   window.addEventListener("scroll", () => {
     if (window.scrollY >= 50) {
       nav.classList.add("scrolled-nav");
@@ -16,28 +22,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
       nav.classList.remove("scrolled-nav");
     }
 
-    if (window.scrollY > (aboutMeDiv.offsetTop - 80)) {
-      document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
-      aboutMeLi.classList.add('active');
-    }
+    if (aboutMeDiv) {
+      if (window.scrollY > (aboutMeDiv.offsetTop - 80)) {
+        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        aboutMeLi.classList.add('active');
+      }
 
-    if (window.scrollY > (skillsDiv.offsetTop - 80)) {
-      document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
-      skillsLi.classList.add('active');
-    }
+      if (window.scrollY > (skillsDiv.offsetTop - 80)) {
+        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        skillsLi.classList.add('active');
+      }
 
-    if (window.scrollY > (experienceDiv.offsetTop - 80)) {
-      document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
-      experienceLi.classList.add('active');
-    }
+      if (window.scrollY > (experienceDiv.offsetTop - 80)) {
+        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        experienceLi.classList.add('active');
+      }
 
-    if (window.scrollY > (contactDiv.offsetTop - 80)) {
-      document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
-      contactLi.classList.add('active');
-    }
+      if (window.scrollY > (contactDiv.offsetTop - 80)) {
+        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        contactLi.classList.add('active');
+      }
 
-    if (window.scrollY < (aboutMeDiv.offsetTop)) {
-      document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+      if (window.scrollY < (aboutMeDiv.offsetTop)) {
+        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+      }
     }
   });
 });

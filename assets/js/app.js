@@ -19,7 +19,6 @@
 //     import "some-package"
 //
 
-require("./video.js");
 require("./navbar.js");
 
 // Include phoenix_html to handle method=PUT/DELETE in forms and buttons.

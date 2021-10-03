@@ -3,7 +3,7 @@ defmodule TedxWeb.HomeLive do
   alias TedxWeb.JobHistory
   alias Tedx.HateMail
 
-  def mount(_params, _session, socket) do
+  def mount(params, _session, socket) do
     changeset = HateMail.change_hate_mail_form(%HateMail{})
 
     {:ok,
@@ -14,7 +14,8 @@ defmodule TedxWeb.HomeLive do
        training: JobHistory.training(),
        name: changeset.data.name,
        email: changeset.data.email,
-       message: changeset.data.message
+       message: changeset.data.message,
+       view: socket.view
      )}
   end
 
@@ -38,5 +39,9 @@ defmodule TedxWeb.HomeLive do
     {:noreply,
      socket
      |> put_flash(:info, "Hate mail sent!")}
+  end
+
+  def handle_params(_, url, socket) do
+    {:noreply, socket}
   end
 end

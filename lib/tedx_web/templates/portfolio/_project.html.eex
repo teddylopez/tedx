@@ -1,0 +1,31 @@
+<div class="center-content">
+  <div class="project-details">
+    <div class="link-and-image">
+      <%= if @project.url do %>
+        <%= link to: @project.url, target: "_blank" do %>
+          <img src="/images/portfolio/<%= @project.name %>.png" alt="report type icon">
+        <% end %>
+      <% else %>
+        <img src="/images/portfolio/<%= @project.name %>.png" alt="report type icon">
+      <% end %>
+    </div>
+    <div class="description">
+      <h1><%= @project.name %></h1>
+      <h3><%= @project.subtitle %></h3>
+      <%= link "View the source code here", to: @project.git, target: "_blank" %>
+      <h3>Technology Used:</h3>
+      <ul>
+        <%= for tech <- @project.tech do %>
+          <li><%= tech %></li>
+        <% end %>
+      </ul>
+      <div class="description-text">
+        <%= @project.desc %>
+      </div>
+      <br>
+      <div class="button">
+        <%= live_patch "Back to Portfolio", to: Routes.live_path(@socket, TedxWeb.PortfolioLive) %>
+      </div>
+    </div>
+  </div>
+</div>

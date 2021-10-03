@@ -3,6 +3,8 @@
 @import "./sidebar.scss";
 @import "./hero.scss";
 @import "./index.scss";
+@import "./portfolio.scss";
+@import "./project.scss";
 @import "./footer.scss";
 @import "./animations.scss";
 
@@ -17,11 +19,37 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #101522;
-}
-
 div.flex-container {
   display: flex;
   align-items: center;
+}
+
+a {
+  color: rgb(41, 98, 255);
+}
+
+div.button {
+  a {
+    border-radius: 50px;
+    background: rgb(255, 23, 68);
+    white-space: nowrap;
+    padding: 5px 10px;
+    color: rgb(1, 6, 6);
+    font-size: 14px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+    text-decoration: none;
+  }
+}
+
+div.nav-button {
+  float: right;
+  display: flex;
+  align-items: center;
+  color: rgb(41, 98, 255) !important;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }

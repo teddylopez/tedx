@@ -1,7 +1,11 @@
 footer {
-  background-color: rgb(16, 21, 34);
+  background-color: rgb(1, 6, 6);
+  height: 80px;
   padding: 20px;
   margin-bottom: 0;
+  @media screen and (max-width: 1000px) {
+    height: 150px;
+  }
 
   div.container {
     display: flex;
