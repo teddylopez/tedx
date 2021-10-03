@@ -1,4 +1,4 @@
-<nav id="nav" x-data="{ home: true }">
+<nav id="nav">
   <div class="inner-content">
     <a href="/" class="brand" @click="home = true">tedlopez</a>
     <!-- <%= live_patch "tedlopez", to: Routes.live_path(@conn, TedxWeb.HomeLive), class: "brand" %> -->

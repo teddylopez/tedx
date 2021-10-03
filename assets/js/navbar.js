@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
   const url = window.location.pathname;
   const navMenu = document.getElementById('nav-menu')
   const nav = document.querySelector('nav');

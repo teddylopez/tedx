@@ -183,45 +183,12 @@ div.section {
   margin-top: -500px;
   display: flex;
   justify-content: center;
-}
-
-#carousel {
-  background-color: white;
-  height: 100vh;
-  overflow-x: hidden;
   @media screen and (max-width: 900px) {
-    height: 750px;
-  }
+    margin-top: -750px;
+    height: 50vh;
 
-  div.inner-content {
-    height: 500px;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-    @media screen and (max-width: 900px) {
-      height: 250px;
-    }
-
-    a {
-      font-family: "Permanent Marker", cursive;
-      transform: rotate(-4deg);
-      padding: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      color: rgb(255, 23, 68);
-      text-shadow: rgb(0 0 0) 3px 3px 0px, rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 5px 5px 0;
-      font-size: 8rem;
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      @media screen and (max-width: 900px) {
-        font-size: 2rem;
-      }
+    div.inner-content {
+      grid-template-areas: "col2" "col1";
     }
   }
 }
