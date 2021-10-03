@@ -205,6 +205,7 @@ div.section {
   div.form-container {
     margin: 0 auto;
     width: 33%;
+    z-index: 5;
     @media screen and (max-width: 900px) {
       width: 90%;
     }
