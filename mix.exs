@@ -62,9 +62,9 @@ defmodule Tedx.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get"],
+      setup: ["deps.get", "cmd --cd assets npm install"],
       "assets.deploy": [
-        "esbuild default --minify",
+        "esbuild --no-runtime-config default --minify",
         "sass default --no-source-map --style=compressed",
         "phx.digest"
       ]
