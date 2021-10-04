@@ -20,7 +20,20 @@ defmodule TedxWeb.Endpoint do
     at: "/",
     from: :tedx,
     gzip: false,
-    only: ~w(assets fonts images favicon.ico robots.txt)
+    only: ~w(assets
+             fonts
+             images
+             favicon.ico
+             robots.txt
+             android-chrome-192x192.png
+             android-chrome-512x512.png
+             apple-touch-icon.png
+             favicon-16x16.png
+             favicon-32x32.png
+             mstile-150x150.png
+             safari-pinned-tab.svg
+             site.webmanifest
+             )
 
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.

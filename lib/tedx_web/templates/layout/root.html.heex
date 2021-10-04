@@ -8,6 +8,16 @@
   <meta name="tedspace.us" content="This website was built by Ted Lopez" />
   <%= csrf_meta_tag() %>
   <%= live_title_tag assigns[:page_title] || "tedlopez" %>
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="tedlopez">
+  <meta name="application-name" content="tedlopez">
+  <meta name="msapplication-TileColor" content="#ff1744">
+  <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
   <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css" )} />
@@ -17,7 +27,7 @@
 <body x-data="{ open: false, home: true }">
   <header>
     <section class="container">
-      <%= render TedxWeb.SharedView, "_nav.html", conn: @conn, view: @view %>
+      <%= render TedxWeb.SharedView, "_nav.html", conn: @conn %>
       <%= render TedxWeb.SharedView, "_sidebar.html", assigns %>
     </section>
   </header>
