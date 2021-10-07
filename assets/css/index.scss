@@ -203,11 +203,10 @@ div.section {
   }
 
   div.form-container {
-    margin: 0 auto;
-    width: 33%;
     z-index: 5;
+    width: 500px;
     @media screen and (max-width: 900px) {
-      width: 90%;
+      width: 100%;
     }
 
     h1 {
@@ -251,7 +250,6 @@ div.section {
           outline: none;
           border: none;
           cursor: pointer;
-          transition: all 0.2s ease-in-out 0s;
           text-decoration: none;
         }
       }

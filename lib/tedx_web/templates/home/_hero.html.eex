@@ -1,0 +1,7 @@
+<div id="hero-container">
+  <div id="video-container"></div>
+  <video autoplay="" loop="" muted src="<%= TedxWeb.HomeView.random_video() %>" type="video/mp4"></video>
+  <div id="banner">
+    <p>software engineer &amp; web developer</p>
+  </div>
+</div>

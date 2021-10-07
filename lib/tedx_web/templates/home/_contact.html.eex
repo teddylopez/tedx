@@ -1,0 +1,3 @@
+<div id="contact" class="section light">
+  <%= live_render(@conn, TedxWeb.ContactLive) %>
+</div>

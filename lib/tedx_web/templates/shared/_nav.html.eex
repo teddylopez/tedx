@@ -1,7 +1,6 @@
 <nav id="nav">
   <div class="inner-content">
-    <a href="/" class="brand" @click="home = true">tedlopez</a>
-    <!-- <%= live_patch "tedlopez", to: Routes.live_path(@conn, TedxWeb.HomeLive), class: "brand" %> -->
+    <%= link("tedlopez", to: "/", class: "brand") %>
     <div id="mobile-icon" @click="open = !open">
       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -9,7 +8,7 @@
         </path>
       </svg>
     </div>
-    <ul class="nav-menu" x-show="home" id="nav-menu">
+    <ul class="nav-menu" id="nav-menu">
       <li class="about-me">
         <a href="#about-me" exact="true" class="">About Me</a>
       </li>
@@ -24,7 +23,7 @@
       </li>
     </ul>
     <div class="nav-button button" @click="home = false">
-      <%= live_patch "Portfolio", to: Routes.live_path(@conn, TedxWeb.PortfolioLive) %>
+      <%= link("Portfolio", to: "/portfolio") %>
     </div>
   </div>
 </nav>

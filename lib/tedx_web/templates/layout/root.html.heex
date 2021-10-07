@@ -24,15 +24,15 @@
   <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js" )}></script>
 </head>
 
-<body x-data="{ open: false, home: true }">
+<body x-data="{ open: false }">
   <header>
     <section class="container">
-      <%= render TedxWeb.SharedView, "_nav.html", conn: @conn %>
+      <%= render TedxWeb.SharedView, "_nav.html", assigns %>
       <%= render TedxWeb.SharedView, "_sidebar.html", assigns %>
     </section>
   </header>
   <%= @inner_content %>
-  <%= render TedxWeb.SharedView, "_footer.html", conn: @conn %>
+  <%= render TedxWeb.SharedView, "_footer.html", assigns %>
 </body>
 
 </html>

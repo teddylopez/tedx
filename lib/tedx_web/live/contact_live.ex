@@ -1,4 +1,4 @@
-defmodule TedxWeb.HomeLive do
+defmodule TedxWeb.ContactLive do
   use TedxWeb, :live_view
   alias TedxWeb.JobHistory
   alias Tedx.HateMail
@@ -6,17 +6,21 @@ defmodule TedxWeb.HomeLive do
   def mount(params, _session, socket) do
     changeset = HateMail.change_hate_mail_form(%HateMail{})
 
-    {:ok,
-     assign(socket,
-       changeset: changeset,
-       jobs: JobHistory.jobs(),
-       education: JobHistory.education(),
-       training: JobHistory.training(),
-       name: changeset.data.name,
-       email: changeset.data.email,
-       message: changeset.data.message,
-       view: socket.view
-     )}
+    socket =
+      assign(socket,
+        changeset: changeset,
+        jobs: JobHistory.jobs(),
+        education: JobHistory.education(),
+        training: JobHistory.training(),
+        name: changeset.data.name,
+        email: changeset.data.email,
+        message: changeset.data.message,
+        tick: 1
+      )
+
+    if connected?(socket), do: socket_reply(socket)
+
+    {:ok, socket}
   end
 
   def handle_event("validate", %{"hate_mail" => params}, socket) do
@@ -41,7 +45,7 @@ defmodule TedxWeb.HomeLive do
      |> put_flash(:info, "Hate mail sent!")}
   end
 
-  def handle_params(_, url, socket) do
-    {:noreply, socket}
+  defp socket_reply(socket, reply \\ :noreply) do
+    {reply, socket |> update(:tick, &(&1 + 1))}
   end
 end

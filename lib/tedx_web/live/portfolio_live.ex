@@ -5,8 +5,7 @@ defmodule TedxWeb.PortfolioLive do
     {:ok,
      assign(socket,
        projects: PortfolioProjects.all(),
-       project: nil,
-       view: socket.view
+       project: nil
      )}
   end
 
@@ -19,6 +18,6 @@ defmodule TedxWeb.PortfolioLive do
   end
 
   def handle_params(_params, url, socket) do
-    {:noreply, socket = assign(socket, project: nil, view: socket.view)}
+    {:noreply, socket = assign(socket, project: nil)}
   end
 end
