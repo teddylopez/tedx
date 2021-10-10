@@ -47,6 +47,9 @@ div.project-details {
     flex-direction: column;
     text-align: left;
     padding-left: 20px;
+    @media screen and (max-width: 1000px) {
+      padding: 3%;
+    }
 
     h1 {
       font-family: "Permanent Marker", cursive;
