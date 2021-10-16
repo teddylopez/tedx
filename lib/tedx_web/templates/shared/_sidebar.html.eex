@@ -12,16 +12,16 @@
   <div class="flex">
     <div>
       <ul>
-        <div @click="open = !open">
+        <div>
           <%= link("tedlopez", to: "/") %>
         </div>
-        <div @click="open = !open">
+        <div>
           <%= link("Portfolio", to: "/portfolio") %>
         </div>
-        <div @click="open = !open">
+        <div>
           <%= link("Github", to: "https://github.com/teddylopez", target: "_blank") %>
         </div>
-        <div @click="open = !open">
+        <div>
           <%= link("LinkedIn", to: "https://www.linkedin.com/in/tedmlopez/", target: "_blank") %>
         </div>
       </ul>
