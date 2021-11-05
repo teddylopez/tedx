@@ -1,5 +1,5 @@
-<div class="project-container" phx-value-project-name="<%= @project.name %>">
-  <%= live_patch to: Routes.live_path(@socket, TedxWeb.PortfolioLive, @project.name) do %>
+<div class="project-container">
+  <%= link to: "/portfolio/#{@project.name}" do %>
     <img src="/images/thumbnails/<%= @project.name %>_thumb.png" alt="report type icon">
     <h3><%= @project.name %></h3>
     <h4><%= @project.subtitle %></h4>

@@ -8,11 +8,11 @@
   <meta name="tedspace.us" content="This website was built by Ted Lopez" />
   <%= csrf_meta_tag() %>
   <%= live_title_tag assigns[:page_title] || "tedlopez" %>
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="apple-mobile-web-app-title" content="tedlopez">
   <meta name="application-name" content="tedlopez">
@@ -24,7 +24,6 @@
   <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js" )}></script>
 
   <%= if Mix.env() == :prod do %>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114818721-1"></script>
   <script>

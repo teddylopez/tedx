@@ -23,7 +23,7 @@ defmodule TedxWeb.Endpoint do
     only: ~w(assets
              fonts
              images
-             favicon.ico
+             favicon.png
              robots.txt
              android-chrome-192x192.png
              android-chrome-512x512.png
@@ -32,7 +32,7 @@ defmodule TedxWeb.Endpoint do
              favicon-32x32.png
              mstile-150x150.png
              safari-pinned-tab.svg
-             site.webmanifest
+             manifest.json
              )
 
   # Code reloading can be explicitly enabled under the

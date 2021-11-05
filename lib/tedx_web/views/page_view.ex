@@ -1,5 +1,7 @@
-defmodule TedxWeb.HomeView do
+defmodule TedxWeb.PageView do
   use TedxWeb, :view
+
+  alias TedxWeb.PageView
 
   def random_video do
     videos = VideoLinks.all()

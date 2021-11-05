@@ -1,7 +1,0 @@
-<div class="portfolio-container">
-  <%= if @project == nil do %>
-    <%= render TedxWeb.PortfolioView, "_project_list.html", projects: @projects, socket: @socket %>
-  <% else %>
-    <%= render TedxWeb.PortfolioView, "_project.html", project: @project, socket: @socket %>
-  <% end %>
-</div>

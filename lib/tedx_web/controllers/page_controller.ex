@@ -1,10 +1,10 @@
-defmodule TedxWeb.HomeController do
+defmodule TedxWeb.PageController do
   use TedxWeb, :controller
 
   alias TedxWeb.JobHistory
 
-  def index(conn, _params) do
-    render(conn, "index.html",
+  def home(conn, _params) do
+    render(conn, "home.html",
       jobs: JobHistory.jobs(),
       education: JobHistory.education(),
       training: JobHistory.training()

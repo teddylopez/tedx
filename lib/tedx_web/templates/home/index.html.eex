@@ -1,9 +1,0 @@
-<div class="index-container">
-  <%= render TedxWeb.HomeView, "_hero.html", assigns %>
-  <%= render TedxWeb.HomeView, "_about_me.html", assigns %>
-  <%= render TedxWeb.HomeView, "_skills.html", assigns %>
-  <%= render TedxWeb.HomeView, "_experience.html", assigns %>
-  <%= render TedxWeb.HomeView, "_carousel.html", assigns %>
-  <%= render TedxWeb.HomeView, "_interests.html", assigns %>
-  <%= render TedxWeb.HomeView, "_contact.html", assigns %>
-</div>

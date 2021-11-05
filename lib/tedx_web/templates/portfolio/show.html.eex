@@ -1,4 +1,4 @@
-<div class="center-content">
+<div class="center-content" style="min-height: calc(100vh - 80px)">
   <div class="project-details">
     <div class="link-and-image">
       <%= if @project.url do %>
@@ -24,7 +24,7 @@
       </div>
       <br>
       <div class="button">
-        <%= live_patch "Back to Portfolio", to: Routes.live_path(@socket, TedxWeb.PortfolioLive) %>
+        <%= link "Back to Portfolio", to: "/portfolio" %>
       </div>
     </div>
   </div>
