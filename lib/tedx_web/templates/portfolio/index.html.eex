@@ -1,33 +1,33 @@
 <div class="portfolio-container">
   <div class="portfolio-items">
     <div class="portfolio-row">
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.scouted, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.stat_lines, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.pitcher_trends, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedsurf, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.scouted, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.stat_lines, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.pitcher_trends, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedsurf, conn: @conn %>
     </div>
     <div class="portfolio-row">
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.trailer_hitch, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedtracker, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.covid, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.depth_chart, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.trailer_hitch, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedtracker, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.covid, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.depth_chart, conn: @conn %>
     </div>
     <div class="portfolio-row">
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedtalks, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedspace, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedlopez, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.amazon, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedtalks, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedspace, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedlopez, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.amazon, conn: @conn %>
     </div>
     <div class="portfolio-row">
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.beatsbyted, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedmetrics, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedness, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.ted_weatherman, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.beatsbyted, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedmetrics, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedness, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.ted_weatherman, conn: @conn %>
     </div>
     <div class="portfolio-row">
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.monthlyvue, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedtype, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.teddygrams, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.monthlyvue, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.tedtype, conn: @conn %>
+      <%= render PortfolioView, "_project_preview.html", project: @projects.teddygrams, conn: @conn %>
     </div>
   </div>
 </div>
