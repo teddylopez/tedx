@@ -15,7 +15,7 @@
     <div class="portfolio-row">
       <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedtalks, conn: @conn %>
       <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedspace, conn: @conn %>
-      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedspace_react, conn: @conn %>
+      <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.tedlopez, conn: @conn %>
       <%= render TedxWeb.PortfolioView, "_project_preview.html", project: @projects.amazon, conn: @conn %>
     </div>
     <div class="portfolio-row">
