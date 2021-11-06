@@ -1,17 +1,13 @@
 defmodule TedxWeb.ContactLive do
   use TedxWeb, :live_view
-  alias TedxWeb.JobHistory
   alias Tedx.HateMail
 
-  def mount(params, _session, socket) do
+  def mount(_params, _session, socket) do
     changeset = HateMail.change_hate_mail_form(%HateMail{})
 
     socket =
       assign(socket,
         changeset: changeset,
-        jobs: JobHistory.jobs(),
-        education: JobHistory.education(),
-        training: JobHistory.training(),
         name: changeset.data.name,
         email: changeset.data.email,
         message: changeset.data.message,

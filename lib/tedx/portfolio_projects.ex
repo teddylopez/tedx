@@ -142,16 +142,16 @@ defmodule PortfolioProjects do
         url: "https://tedspace-redesign.herokuapp.com/",
         git: "https://github.com/teddylopez/tedspace"
       },
-      tedspace_react: %{
+      tedlopez: %{
         id: 14,
-        name: "tedspace_react",
-        title: "tedspace-react",
+        name: "tedlopez",
+        title: "tedlopez",
         subtitle: "My latest portfolio website... this one!",
         desc:
-          "I rebuilt my last portfolio website into a concise, mobile-friendly and responsive website using React. I made use of the popular 'styled-components' React module to style the entire project.",
-        tech: ["React", "JavaScript"],
+          "I rebuilt my last portfolio website into a concise, mobile-friendly and responsive website. Initially, I built it using JavaScript and React, and most recently redesigned it with Elixir and Phoenix. You can view both codebases on my github page.",
+        tech: ["Elixir", "Phoenix", "JavaScript", "React"],
         url: "http://tedlopez.us/",
-        git: "https://github.com/teddylopez/tedspace_v3"
+        git: "https://github.com/teddylopez/tedx"
       },
       tedtracker: %{
         id: 15,

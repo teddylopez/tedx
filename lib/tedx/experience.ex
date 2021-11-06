@@ -1,4 +1,4 @@
-defmodule TedxWeb.JobHistory do
+defmodule TedxWeb.Experience do
   def jobs do
     [
       %{
@@ -59,47 +59,90 @@ defmodule TedxWeb.JobHistory do
 
   def training do
     [
-      %{
-        link: "https://www.udemy.com/professional-rails-5-development-course/",
-        title: "Dissecting Ruby on Rails 5: Become a Professional Developer"
-      },
-      %{
-        link: "https://www.udemy.com/professional-ruby-on-rails-coding-course/",
-        title: "Professional Rails Code Along"
-      },
-      %{
-        link: "https://www.udemy.com/comprehensive-ruby-programming-tutorial/",
-        title: "Comprehensive Ruby Programming"
-      },
-      %{
-        link: "https://www.udemy.com/course/ruby-metaprogramming/",
-        title: "Ruby Metaprogramming - Complete Course"
-      },
-      %{
-        link: "https://www.udemy.com/react-2nd-edition/",
-        title: "The Complete React Web Developer Course (with Redux)"
-      },
-      %{
-        link: "https://www.udemy.com/understand-javascript/",
-        title: "JavaScript: Understanding the Weird Parts"
-      },
-      %{
-        link: "https://www.udemy.com/jquery-course",
-        title: "The Complete jQuery Course: Beginner to Professional"
-      },
-      %{
-        link:
-          "https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/",
-        title: "The Complete Elixir and Phoenix Bootcamp"
-      },
-      %{
-        link: "https://www.udemy.com/ios11-app-development-bootcamp/",
-        title: "iOS 11 &amp; Swift 4: The Complete iOS App Development Bootcamp"
-      },
-      %{
-        link: "https://www.udemy.com/course/100-days-of-code/",
-        title: "100 Days of Code - The Complete Python Pro Bootcamp for 2021"
-      }
+      ruby_on_rails: [
+        %{
+          link: "https://www.udemy.com/comprehensive-ruby-programming-tutorial/",
+          title: "Comprehensive Ruby Programming"
+        },
+        %{
+          link: "https://www.udemy.com/professional-rails-5-development-course/",
+          title: "Dissecting Ruby on Rails 5: Become a Professional Developer"
+        },
+        %{
+          link: "https://www.udemy.com/professional-ruby-on-rails-coding-course/",
+          title: "Professional Rails Code Along"
+        },
+        %{
+          link: "https://www.udemy.com/course/ruby-metaprogramming/",
+          title: "Ruby Metaprogramming - Complete Course"
+        }
+      ],
+      elixir: [
+        %{
+          link:
+            "https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/",
+          title: "The Complete Elixir and Phoenix Bootcamp"
+        },
+        %{
+          link: "https://pragmaticstudio.com/courses/elixir",
+          title: "Elixir & OTP"
+        },
+        %{
+          link: "https://pragmaticstudio.com/courses/phoenix-liveview",
+          title: "Phoenix LiveView"
+        }
+      ],
+      javascript: [
+        %{
+          link: "https://www.udemy.com/jquery-course",
+          title: "The Complete jQuery Course: Beginner to Professional"
+        },
+        %{
+          link: "https://codewithmosh.com/p/the-complete-node-js-course",
+          title: "The Complete Node.js Course"
+        },
+        %{
+          link: "https://www.udemy.com/react-2nd-edition/",
+          title: "The Complete React Web Developer Course (with Redux)"
+        },
+        %{
+          link: "https://codewithmosh.com/p/mastering-react",
+          title: "Mastering React"
+        },
+        %{
+          link: "https://www.udemy.com/understand-javascript/",
+          title: "JavaScript: Understanding the Weird Parts"
+        },
+        %{
+          link: "https://codewithmosh.com/p/ultimate-redux",
+          title: "The Ultimate Redux Course"
+        }
+      ],
+      ios: [
+        %{
+          link: "https://www.udemy.com/ios11-app-development-bootcamp/",
+          title: "iOS 11 & Swift 4: The Complete iOS App Development Bootcamp"
+        }
+      ],
+      python: [
+        %{
+          link: "https://www.udemy.com/course/100-days-of-code/",
+          title: "100 Days of Code - The Complete Python Pro Bootcamp for 2021"
+        }
+      ],
+      sql: [
+        %{
+          link: "https://codewithmosh.com/p/complete-sql-mastery",
+          title: "Complete SQL Mastery"
+        }
+      ]
     ]
   end
+
+  def label_category(:elixir), do: "Elixir"
+  def label_category(:ios), do: "iOS"
+  def label_category(:javascript), do: "JavaScript"
+  def label_category(:python), do: "Python"
+  def label_category(:ruby_on_rails), do: "Ruby on Rails"
+  def label_category(:sql), do: "SQL"
 end

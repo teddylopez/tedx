@@ -1,6 +1,7 @@
 defmodule TedxWeb.PageView do
   use TedxWeb, :view
 
+  alias TedxWeb.Experience
   alias TedxWeb.PageView
 
   def random_video do

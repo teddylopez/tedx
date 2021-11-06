@@ -26,9 +26,16 @@
 
     <h1 class="header">Training</h1>
     <div class="training-list">
-      <%= for course <- @training do %>
-        <div>
-          <a href={course.link} target="_blank"><%= course.title %></a>
+      <%= for {category, list_of_courses} <- @training do %>
+        <div class="category-group">
+          <h2>
+            <%= Experience.label_category(category) %>
+          </h2>
+          <%= for course <- list_of_courses do %>
+            <div class="course-link">
+              <a href="<%= course.link %>" target="_blank"><%= course.title %></a>
+            </div>
+          <% end %>
         </div>
       <% end %>
     </div>

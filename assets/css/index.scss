@@ -160,18 +160,28 @@ div.section {
   }
 
   div.training-list {
-    div {
-      margin: 10px 0;
+    div.category-group {
+      margin-bottom: 20px;
 
-      a {
-        color: rgb(255, 255, 255);
-        text-decoration: none;
-        font-size: 18px;
-        padding: 5px;
+      div.course-link {
+        a {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+          font-size: 18px;
 
-        &:hover {
-          color: #ff1744;
-          transition: all 0.3s ease-in-out;
+          &:hover {
+            color: #ff1744;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+      @media screen and (max-width: 900px) {
+        padding: 10px 0;
+
+        div.course-link {
+          a {
+            font-size: 16px;
+          }
         }
       }
     }

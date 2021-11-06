@@ -5,7 +5,7 @@ defmodule TedxWeb.PortfolioController do
     render(conn, "index.html", projects: PortfolioProjects.all())
   end
 
-  def show(conn, %{"id" => id} = params) do
+  def show(conn, %{"id" => id}) do
     id = String.to_atom(id)
     project = PortfolioProjects.all()[id]
     render(conn, "show.html", project: project)
