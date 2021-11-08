@@ -188,13 +188,12 @@ div.section {
 }
 
 #interests {
-  height: 50vh;
+  height: 100vh;
   margin-top: -500px;
   display: flex;
   justify-content: center;
   @media screen and (max-width: 900px) {
-    margin-top: -750px;
-    height: 60vh;
+    margin-top: -600px;
 
     div.inner-content {
       grid-template-areas: "col2" "col1";
