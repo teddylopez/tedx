@@ -5,5 +5,4 @@
   <%= render PageView, "_experience.html", assigns %>
   <%= render PageView, "_carousel.html", assigns %>
   <%= render PageView, "_interests.html", assigns %>
-  <%= render PageView, "_contact.html", assigns %>
 </div>
