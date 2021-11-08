@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const skillsLi = document.querySelector('li.skills');
   const experienceDiv = document.getElementById('experience');
   const experienceLi = document.querySelector('li.experience');
-  // const contactDiv = document.getElementById('contact');
-  // const contactLi = document.querySelector('li.contact');
+  const contactDiv = document.getElementById('contact');
+  const contactLi = document.querySelector('li.contact');
 
   if (url !== '/') {
     navMenu.style.display = 'none';
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
         experienceLi.classList.add('active');
       }
 
-      // if (window.scrollY > (contactDiv.offsetTop - 80)) {
-      //   document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
-      //   contactLi.classList.add('active');
-      // }
+      if (window.scrollY > (contactDiv.offsetTop - 80)) {
+        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        contactLi.classList.add('active');
+      }
 
       if (window.scrollY < (aboutMeDiv.offsetTop)) {
         document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));

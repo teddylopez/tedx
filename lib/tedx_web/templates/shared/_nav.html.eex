@@ -18,6 +18,9 @@
       <li class="experience">
         <a href="#experience" exact="true" class="">Experience</a>
       </li>
+      <li class="contact">
+        <a href="#contact" exact="true" class="">Contact</a>
+      </li>
     </ul>
     <div class="nav-button button" @click="home = false">
       <%= link("Portfolio", to: "/portfolio") %>
