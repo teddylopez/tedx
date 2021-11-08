@@ -10,7 +10,10 @@ defmodule TedxWeb.Endpoint do
     signing_salt: "hdeEvdPg"
   ]
 
-  socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
+  socket "/live",
+         Phoenix.LiveView.Socket,
+         websocket: [connect_info: [session: @session_options]],
+         check_origin: ["tedlopez.us", "https://tedlopez.us", "http://tedlopez.us"]
 
   # Serve at "/" the static files from "priv/static" directory.
   #
