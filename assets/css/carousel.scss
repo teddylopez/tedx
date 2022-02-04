@@ -34,6 +34,11 @@ div#carousel {
     }
   }
 }
+@media screen and (max-width: 768px) {
+  div#carousel {
+    height: 25vh;
+  }
+}
 
 div#slider {
   opacity: 0.75;
