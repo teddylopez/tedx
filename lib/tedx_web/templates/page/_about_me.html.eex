@@ -10,7 +10,7 @@
       </div>
       <div class="image-box">
         <div class="image-wrapper">
-          <img src="<%= Routes.static_path(@conn, "/images/trophy.jpg" ) %>" alt="picture of me" />
+          <img src="<%= Routes.static_path(@socket, "/images/trophy.jpg" ) %>" alt="picture of me" />
         </div>
       </div>
     </div>

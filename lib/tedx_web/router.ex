@@ -16,9 +16,9 @@ defmodule TedxWeb.Router do
 
   scope "/", TedxWeb do
     pipe_through :browser
-    get "/", PageController, :home
-    get "/portfolio", PortfolioController, :index
-    get "/portfolio/:id", PortfolioController, :show
+    live "/", HomeLive
+    live "/portfolio", PortfolioLive
+    live "/portfolio/:id", ProjectLive
   end
 
   # Other scopes may use custom stacks.

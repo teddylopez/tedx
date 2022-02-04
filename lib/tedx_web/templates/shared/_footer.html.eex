@@ -1,8 +1,8 @@
-<footer class="sc-citwmv kajamm">
+<footer>
   <div class="container">
     <section>
       <div class="inner-content">
-        <%= link("tedlopez", to: "/") %>
+        <%= live_redirect "tedlopez", to: Routes.live_path(@socket, HomeLive), class: "brand" %>
         <div class="details">
           <small>240-271-7135 · tedmlopez@gmail.com</small>
           <small>tedlopez ©️ 2021 All Rights Reserved</small>

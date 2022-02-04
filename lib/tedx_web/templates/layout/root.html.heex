@@ -42,12 +42,12 @@
 <body x-data="{ open: false }">
   <header>
     <section class="container">
-      <%= render TedxWeb.SharedView, "_nav.html", assigns %>
-      <%= render TedxWeb.SharedView, "_sidebar.html", assigns %>
+      <%= render SharedView, "_nav.html", assigns %>
+      <%= render SharedView, "_sidebar.html", assigns %>
     </section>
   </header>
   <%= @inner_content %>
-  <%= render TedxWeb.SharedView, "_footer.html", assigns %>
+  <%= render SharedView, "_footer.html", assigns %>
 </body>
 
 </html>

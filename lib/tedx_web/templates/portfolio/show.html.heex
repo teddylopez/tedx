@@ -1,12 +1,15 @@
-<div class="center-content" style="min-height: calc(100vh - 80px)">
+<div class="center-content"
+     phx-hook="ProjectNavBar"
+     id="project-content"
+     style="min-height: calc(100vh - 80px)">
   <div class="project-details">
     <div class="link-and-image">
       <%= if @project.url do %>
         <%= link to: @project.url, target: "_blank" do %>
-          <img src="/images/portfolio/<%= @project.name %>.png" alt="report type icon">
+          <img src={"/images/portfolio/#{@project.name}.png"} alt="report type icon">
         <% end %>
       <% else %>
-        <img src="/images/portfolio/<%= @project.name %>.png" alt="report type icon">
+        <img src={"/images/portfolio/#{@project.name}.png"} alt="report type icon">
       <% end %>
     </div>
     <div class="description">
@@ -24,7 +27,7 @@
       </div>
       <br>
       <div class="button">
-        <%= link "Back to Portfolio", to: "/portfolio" %>
+        <%= live_redirect "Back to Portfolio", to: Routes.live_path(@socket, PortfolioLive) %>
       </div>
     </div>
   </div>

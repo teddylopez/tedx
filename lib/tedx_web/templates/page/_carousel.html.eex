@@ -1,15 +1,15 @@
 <div id="carousel">
   <div>
-    <div class="overlay-link" @click="home = false">
-      <a href="/portfolio" class="brand">View My Work</a>
+    <div class="overlay-link">
+      <%= live_redirect "View My Work", to: Routes.live_path(@socket, PortfolioLive), class: "brand" %>
     </div>
     <div id="slider">
       <figure>
-        <img src="<%= Routes.static_path(@conn, "/images/carousel/carousel_one.png") %>" />
-        <img src="<%= Routes.static_path(@conn, "/images/carousel/carousel_two.png") %>" />
-        <img src="<%= Routes.static_path(@conn, "/images/carousel/carousel_three.png") %>" />
-        <img src="<%= Routes.static_path(@conn, "/images/carousel/carousel_four.png") %>" />
-        <img src="<%= Routes.static_path(@conn, "/images/carousel/carousel_one.png") %>" />
+        <img src="<%= Routes.static_path(@socket, "/images/carousel/carousel_one.png") %>" />
+        <img src="<%= Routes.static_path(@socket, "/images/carousel/carousel_two.png") %>" />
+        <img src="<%= Routes.static_path(@socket, "/images/carousel/carousel_three.png") %>" />
+        <img src="<%= Routes.static_path(@socket, "/images/carousel/carousel_four.png") %>" />
+        <img src="<%= Routes.static_path(@socket, "/images/carousel/carousel_one.png") %>" />
       </figure>
     </div>
   </div>

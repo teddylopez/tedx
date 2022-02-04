@@ -1,6 +1,7 @@
 <nav id="nav">
   <div class="inner-content">
-    <%= link("tedlopez", to: "/", class: "brand") %>
+    <%= live_redirect "tedlopez", to: Routes.live_path(@socket, HomeLive), class: "brand" %>
+
     <div id="mobile-icon" @click="open = !open">
       <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -23,7 +24,7 @@
       </li>
     </ul>
     <div class="nav-button button" @click="home = false">
-      <%= link("Portfolio", to: "/portfolio") %>
+      <%= live_redirect "Portfolio", to: Routes.live_path(@socket, PortfolioLive) %>
     </div>
   </div>
 </nav>

@@ -1,4 +1,4 @@
-defmodule PortfolioProjects do
+defmodule Tedx.PortfolioProjects do
   def all do
     %{
       pitcher_trends: %{

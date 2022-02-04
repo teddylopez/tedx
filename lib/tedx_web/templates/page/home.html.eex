@@ -1,9 +1,0 @@
-<div class="index-container">
-  <%= render PageView, "_hero.html", assigns %>
-  <%= render PageView, "_about_me.html", assigns %>
-  <%= render PageView, "_skills.html", assigns %>
-  <%= render PageView, "_experience.html", assigns %>
-  <%= render PageView, "_carousel.html", assigns %>
-  <%= render PageView, "_interests.html", assigns %>
-  <%= render PageView, "_contact.html", assigns %>
-</div>

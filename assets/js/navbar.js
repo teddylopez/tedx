@@ -1,4 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
+let methods = {}
+
+function clearActiveStyles() {
+  const navMenu = document.getElementById('nav-menu');
+  navMenu.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+}
+
+methods.styleNavBar = function() {
   const url = window.location.pathname;
   const navMenu = document.getElementById('nav-menu')
   const nav = document.querySelector('nav');
@@ -15,37 +22,51 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.style.display = 'none';
   }
 
-  window.addEventListener("scroll", () => {
+  window.addEventListener('scroll', () => {
     if (window.scrollY >= 50) {
-      nav.classList.add("scrolled-nav");
+      nav.classList.add('scrolled-nav');
     } else {
-      nav.classList.remove("scrolled-nav");
+      nav.classList.remove('scrolled-nav');
     }
 
     if (aboutMeDiv) {
       if (window.scrollY > (aboutMeDiv.offsetTop - 80)) {
-        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        clearActiveStyles();
         aboutMeLi.classList.add('active');
       }
 
       if (window.scrollY > (skillsDiv.offsetTop - 80)) {
-        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        clearActiveStyles();
         skillsLi.classList.add('active');
       }
 
       if (window.scrollY > (experienceDiv.offsetTop - 80)) {
-        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        clearActiveStyles();
         experienceLi.classList.add('active');
       }
 
       if (window.scrollY > (contactDiv.offsetTop - 80)) {
-        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        clearActiveStyles();
         contactLi.classList.add('active');
       }
 
       if (window.scrollY < (aboutMeDiv.offsetTop)) {
-        document.querySelectorAll('li.active').forEach((li) => li.classList.remove('active'));
+        clearActiveStyles();
       }
     }
   });
-});
+};
+
+methods.hideNavMenu = function() {
+  document.getElementById('nav-menu').style.display = 'none';
+}
+
+methods.showNavMenu = function() {
+  document.getElementById('nav-menu').style.display = 'flex';
+}
+
+methods.clearActiveStyles = function() {
+  clearActiveStyles();
+}
+
+exports.methods = methods;

@@ -1,4 +1,4 @@
-defmodule TedxWeb.Experience do
+defmodule Tedx.Experience do
   def jobs do
     [
       %{

@@ -1,0 +1,33 @@
+<div class="portfolio-container" phx-hook="PortfolioNavBar" id="portfolio-content">
+  <div class="portfolio-items">
+    <div class="portfolio-row">
+      <%= render "_project_preview.html", project: @projects.scouted, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.stat_lines, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.pitcher_trends, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedsurf, socket: @socket %>
+    </div>
+    <div class="portfolio-row">
+      <%= render "_project_preview.html", project: @projects.trailer_hitch, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedtracker, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.covid, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.depth_chart, socket: @socket %>
+    </div>
+    <div class="portfolio-row">
+      <%= render "_project_preview.html", project: @projects.tedtalks, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedspace, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedlopez, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.amazon, socket: @socket %>
+    </div>
+    <div class="portfolio-row">
+      <%= render "_project_preview.html", project: @projects.beatsbyted, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedmetrics, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedness, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.ted_weatherman, socket: @socket %>
+    </div>
+    <div class="portfolio-row">
+      <%= render "_project_preview.html", project: @projects.monthlyvue, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.tedtype, socket: @socket %>
+      <%= render "_project_preview.html", project: @projects.teddygrams, socket: @socket %>
+    </div>
+  </div>
+</div>

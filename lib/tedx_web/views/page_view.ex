@@ -1,8 +1,8 @@
 defmodule TedxWeb.PageView do
   use TedxWeb, :view
 
-  alias TedxWeb.Experience
-  alias TedxWeb.PageView
+  alias Tedx.{Experience, VideoLinks}
+  alias TedxWeb.{PageView, PortfolioLive}
 
   def random_video do
     videos = VideoLinks.all()

@@ -1,5 +1,5 @@
 <div class="project-container">
-  <%= link to: "/portfolio/#{@project.name}" do %>
+  <%= live_redirect to: Routes.live_path(@socket, ProjectLive, @project.name) do %>
     <img src="/images/thumbnails/<%= @project.name %>_thumb.png" alt="report type icon">
     <h3><%= @project.name %></h3>
     <h4><%= @project.subtitle %></h4>

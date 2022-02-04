@@ -1,5 +1,5 @@
 defmodule TedxWeb.PortfolioView do
   use TedxWeb, :view
 
-  alias TedxWeb.PortfolioView
+  alias TedxWeb.{PortfolioLive, ProjectLive}
 end

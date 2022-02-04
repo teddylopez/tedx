@@ -1,4 +1,4 @@
-defmodule VideoLinks do
+defmodule Tedx.VideoLinks do
   def all do
     [
       'https://s3.amazonaws.com/tedspace/videos/Waves.mp4',

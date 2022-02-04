@@ -12,11 +12,11 @@
   <div class="flex">
     <div>
       <ul>
-        <div>
-          <%= link("tedlopez", to: "/") %>
+        <div @click="open = false">
+          <%= live_redirect "tedlopez", to: Routes.live_path(@socket, HomeLive) %>
         </div>
-        <div>
-          <%= link("Portfolio", to: "/portfolio") %>
+        <div @click="open = false">
+          <%= live_redirect "Portfolio", to: Routes.live_path(@socket, PortfolioLive) %>
         </div>
         <div>
           <%= link("Github", to: "https://github.com/teddylopez", target: "_blank") %>

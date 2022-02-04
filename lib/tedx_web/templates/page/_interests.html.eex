@@ -12,7 +12,7 @@
       </div>
       <div class="image-box">
         <div class="image-wrapper">
-          <img src="<%= Routes.static_path(@conn, "/images/surfer.svg" ) %>" alt="mission impossible" />
+          <img src="<%= Routes.static_path(@socket, "/images/surfer.svg" ) %>" alt="mission impossible" />
         </div>
       </div>
     </div>
