@@ -24,6 +24,7 @@ Hooks.ProjectNavBar = {
   mounted() {
     scroll.methods.scrollToTop();
     navbar.methods.hideNavMenu();
+    navbar.methods.styleNavBar();
   }
 }
 
