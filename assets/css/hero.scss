@@ -45,17 +45,31 @@
     flex-direction: column;
     -webkit-box-align: center;
     align-items: center;
+    color: rgb(255, 255, 255);
 
     p {
       font-family: "Permanent Marker", cursive;
       text-shadow: rgb(0 0 0) 3px 3px 0px, rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 1px 1px 0;
-      color: rgb(255, 255, 255);
       font-size: 24px;
       text-align: center;
       max-width: 600px;
+
       @media screen and (max-width:768px) {
-        // margin-top: 1rem;
         font-size: 55px;
+        line-height: 0.8;
+        transform: rotate(-9deg);
+      }
+    }
+
+    small {
+      text-transform: uppercase;
+      font-size: 12px;
+      text-align: center;
+      max-width: 600px;
+    
+      @media screen and (max-width:768px) {
+        margin-top: 2rem;
+        font-size: 12px;
         line-height: 0.8;
         transform: rotate(-9deg);
       }

@@ -3,5 +3,6 @@
   <video autoplay="" loop="" muted src="<%= PageView.random_video() %>" type="video/mp4"></video>
   <div id="banner">
     <p>software engineer &amp; web developer</p>
+    <small>☀️ St. Petersburg, Florida 🐊</small>
   </div>
 </div>
