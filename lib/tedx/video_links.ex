@@ -35,7 +35,8 @@ defmodule Tedx.VideoLinks do
       'https://s3.amazonaws.com/tedspace/videos/scherzer-dodgers.mp4',
       'https://s3.amazonaws.com/tedspace/videos/strasburg-dodgers.mp4',
       'https://s3.amazonaws.com/tedspace/videos/wildcard.mp4',
-      'https://s3.amazonaws.com/tedspace/videos/zimm-soto.mp4'
+      'https://s3.amazonaws.com/tedspace/videos/zimm-soto.mp4',
+      'https://tedspace.s3.amazonaws.com/videos/lebowski-intro.mp4'
     ]
   end
 end
