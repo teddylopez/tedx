@@ -6,7 +6,7 @@
           <p class="caption">Skills</p>
           <h1 class="header">TECHNICAL SKILLS</h1>
           <p class="details">
-            HTML, CSS, responsive design, JavaScript, Angular/React/Vue frameworks/libraries, Node.js, Alpine.js, Ruby on Rails, Elixir, Phoenix, Swift, Python, data visualization, Git, frontend and backend experience, Adobe Photoshop, Illustrator, Eloqua, Salesforce, Sitecore, Google Analytics, Webtrends, Windows, Mac OS, Linux, Firebase, MySQL, Postgresql
+            HTML, CSS, responsive design, Elixir, Phoenix, LiveView, Ecto, Ruby on Rails, JavaScript, Angular/React/Vue frameworks/libraries, Node.js, Alpine.js, Swift, Python, data visualization, object-oriented design, functional programming, Postgresql and relational databases,Git, frontend and backend experience
           </p>
         </div>
       </div>

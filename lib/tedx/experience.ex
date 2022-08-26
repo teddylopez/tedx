@@ -59,6 +59,33 @@ defmodule Tedx.Experience do
 
   def training do
     [
+      elixir: [
+        %{
+          link:
+            "https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/",
+          title: "The Complete Elixir and Phoenix Bootcamp"
+        },
+        %{
+          link: "https://pragmaticstudio.com/courses/elixir",
+          title: "Elixir & OTP"
+        },
+        %{
+          link: "https://pragmaticstudio.com/courses/phoenix-liveview",
+          title: "Phoenix LiveView"
+        },
+        %{
+          link: "https://thinkingelixir.com/available-courses/",
+          title: "Pattern Matching"
+        },
+        %{
+          link: "https://thinkingelixir.com/available-courses/",
+          title: "Code Flow"
+        },
+        %{
+          link: "https://codestool.coding-gnome.com/courses/elixir-for-programmers-2",
+          title: "Elixir for Programmers, Second Edition"
+        }
+      ],
       ruby_on_rails: [
         %{
           link: "https://www.udemy.com/comprehensive-ruby-programming-tutorial/",
@@ -75,21 +102,6 @@ defmodule Tedx.Experience do
         %{
           link: "https://www.udemy.com/course/ruby-metaprogramming/",
           title: "Ruby Metaprogramming - Complete Course"
-        }
-      ],
-      elixir: [
-        %{
-          link:
-            "https://www.udemy.com/course/the-complete-elixir-and-phoenix-bootcamp-and-tutorial/",
-          title: "The Complete Elixir and Phoenix Bootcamp"
-        },
-        %{
-          link: "https://pragmaticstudio.com/courses/elixir",
-          title: "Elixir & OTP"
-        },
-        %{
-          link: "https://pragmaticstudio.com/courses/phoenix-liveview",
-          title: "Phoenix LiveView"
         }
       ],
       javascript: [
@@ -135,6 +147,12 @@ defmodule Tedx.Experience do
           link: "https://codewithmosh.com/p/complete-sql-mastery",
           title: "Complete SQL Mastery"
         }
+      ],
+      ecto: [
+        %{
+          link: "https://pragprog.com/titles/wmecto/programming-ecto/",
+          title: "Programming Ecto"
+        }
       ]
     ]
   end
@@ -145,4 +163,5 @@ defmodule Tedx.Experience do
   def label_category(:python), do: "Python"
   def label_category(:ruby_on_rails), do: "Ruby on Rails"
   def label_category(:sql), do: "SQL"
+  def label_category(:ecto), do: "Ecto"
 end
