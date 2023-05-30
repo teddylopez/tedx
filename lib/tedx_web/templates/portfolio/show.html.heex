@@ -2,15 +2,15 @@
      phx-hook="ProjectNavBar"
      id="project-content"
      style="min-height: calc(100vh - 80px)">
-  <div class="project-details">
+  <div class="project-details" style="margin-top: 5rem;">
     <div class="link-and-image">
-      <%= if @project.url do %>
-        <%= link to: @project.url, target: "_blank" do %>
-          <img src={"/images/portfolio/#{@project.name}.png"} alt="report type icon">
-        <% end %>
-      <% else %>
-        <img src={"/images/portfolio/#{@project.name}.png"} alt="report type icon">
-      <% end %>
+      <div style="margin-bottom: 1rem; text-align: left;">
+      <small style="text-align: left;">
+        Unfortunately the service that I use to host my portfolio projects is no longer an option.
+        I am in the process of moving them to an alternative.
+      </small>
+      </div>
+      <img src={"/images/portfolio/#{@project.name}.png"} alt="report type icon">
     </div>
     <div class="description">
       <h1><%= @project.name %></h1>
