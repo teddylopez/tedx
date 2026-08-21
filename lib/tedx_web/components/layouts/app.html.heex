@@ -1,0 +1,13 @@
+<header>
+  <section>
+    <.nav socket={@socket} />
+    <.sidebar />
+  </section>
+</header>
+<main>
+  <div>
+    <.flash_group flash={@flash} />
+    <%= @inner_content %>
+    <.footer />
+  </div>
+</main>

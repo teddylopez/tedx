@@ -1,0 +1,193 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+div.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: rgb(41, 98, 255);
+}
+
+div.button {
+  a {
+    border-radius: 50px;
+    background: rgb(255, 23, 68);
+    white-space: nowrap;
+    padding: 5px 10px;
+    color: rgb(1, 6, 6);
+    font-size: 14px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+    text-decoration: none;
+  }
+}
+
+div.nav-button {
+  float: right;
+  display: flex;
+  align-items: center;
+  color: rgb(41, 98, 255) !important;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+p.caption {
+  color: rgb(255, 23, 68);
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+h1.header {
+  font-family: "Permanent Marker", cursive;
+  transform: rotate(-4deg);
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+p.details {
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h1.header {
+  font-family: "Permanent Marker", cursive;
+  transform: rotate(-4deg);
+  color: rgb(255, 23, 68);
+  font-size: 2.5rem;
+}
+
+div.job-details {
+  h2 {
+    font-size: 1.75rem;
+    color: rgb(255, 255, 255);
+
+    @media screen and (max-width: 900px) {
+      font-size: 20px;
+    }
+  }
+}
+
+div.training-list {
+  div.category-group {
+    margin-bottom: 20px;
+
+    div.course-link {
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 18px;
+
+        &:hover {
+          color: #ff1744;
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      padding: 10px 0;
+
+      div.course-link {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+div#carousel {
+  height: 100vh;
+  background-color: white;
+
+  div.overlay-link {
+    height: 500px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    @media screen and (max-width: 900px) {
+      height: 200px;
+    }
+
+    a {
+      font-family: "Permanent Marker", cursive;
+      transform: rotate(-4deg);
+      padding: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: rgb(255, 23, 68);
+      text-shadow: rgb(0 0 0) 3px 3px 0px, rgb(0 0 0) -1px -1px 0px, rgb(0 0 0) 1px -1px 0px, rgb(0 0 0) -1px 1px 0px, rgb(0 0 0) 5px 5px 0;
+      font-size: 8rem;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+
+      @media screen and (max-width: 900px) {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div#carousel {
+    height: 25vh;
+  }
+}
+
+div#slider {
+  opacity: 0.75;
+  height: 1000px;
+  overflow-x: hidden;
+
+  figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s Slider infinite;
+
+    img {
+      -webkit-mask-image: linear-gradient(to top, transparent 0%, black 75%);
+      mask-image: linear-gradient(to top, transparent 0%, black 75%);
+      width: 20%;
+      float: left;
+    }
+  }
+}
+
+.scrolled-nav {
+  background-color: rgb(1, 6, 6);
+}
